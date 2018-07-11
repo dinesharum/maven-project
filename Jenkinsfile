@@ -16,5 +16,12 @@ pipeline{
 				}
 			}
 		}
+
+		stage('Deploy to Stage'){
+			steps{
+				echo "Starting the deployment to staging server"
+				build job: 'deploy-to-container-apache'
+			}
+		}
 	}
 }
