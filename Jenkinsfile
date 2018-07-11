@@ -27,7 +27,7 @@ pipeline{
 		stage('Deploy to Production'){
 			steps{
 				echo "Waiting for the production deployment approval?"
-				timeout(time:5 ,units:'DAYS'){
+				timeout(time:5 ,unit:'DAYS'){
 					input message: "Approve Production Deployment?"
 				}
 
